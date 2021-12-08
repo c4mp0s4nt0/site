@@ -121,12 +121,11 @@
                 
                     <li><button onclick="AtivarDesativarFS();" style="background-color:#2166e6;" id="botaof11"><img src="img/f11-key.png" alt="" id="logof12"></button>
                         <script>
-                            //Criando uma variável global para nos dizer em qual estado a tela atual se encontra.
+                           
                             isFullScreen = false;
                             var elem = document.documentElement;
                             function AtivarDesativarFS() {
-                                //Se o estado atual for "FullScreen", desativá-lo.
-                                //Note que para as verificações é feito uma validação para todos os possíveis navegadores, facilitando a sua vida.
+                               
                                   
                                 if (elem.requestFullscreen) {
                                  elem.requestFullscreen();
@@ -147,12 +146,12 @@
                                   if (document.exitFullscreen) {
                                   document.exitFullscreen();
                                   isFullScreen = false;
-                                } else if (document.mozCancelFullScreen) { /* Firefox */
+                                } else if (document.mozCancelFullScreen) { 
                                   document.mozCancelFullScreen();
                                   isFullScreen = false;
-                                } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+                                } else if (document.webkitExitFullscreen) { 
                                   document.webkitExitFullscreen();
-                                } else if (document.msExitFullscreen) { /* IE/Edge */
+                                } else if (document.msExitFullscreen) { 
                                   document.msExitFullscreen();
                                   isFullScreen = false;
                                 }
