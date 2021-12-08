@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Romulo Montovani</title>
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/planodefundo.css">
+    <link rel="stylesheet" href="css/steam.css">
+    <link rel="stylesheet" href="css/areadetrabalho.css">
+    <link rel="stylesheet" href="css/menuhorizontal.css">
+    <link rel="stylesheet" href="css/engrenagem2.css">
+    <link rel="stylesheet" href="css/barrinha.css">
+    <link rel="stylesheet" href="css/mediaqueryindex.css">
+    <link rel="stylesheet" href="css/query1024.css">
+    
+    
+</head>
+
+
+<body>
+
+   <header>
+    <div id="data-hora"></div>
+    <script>
+        
+        const zeroFill = n => {
+            return ('0' + n).slice(-2);
+        }
+
+        
+        const interval = setInterval(() => {
+            
+            const now = new Date();
+
+            
+            const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+            
+            document.getElementById('data-hora').innerHTML = dataHora;
+        }, 1000);
+    </script>
+
+
+    <div id="wifi"><a href="#"><img src="img/wifi.png" alt="" id="logowifi"></a></div>
+
+    <div><img src="img/sinal.png" alt="" id="sinal"></div>
+   </header>
+    
+    <div id="menu">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox"><img src="img/menuteste.png" alt="" id="botaomenu"></label>
+        <nav id="menutraco">
+            <ul>
+                <div id="quem">
+                    <li><a href="sobre.html" class="linkmenu">Quem sou eu?</a></li>
+                </div>
+                <div id="skills">
+                    <li><a href="#" class="linkmenu">Skills</a></li>
+                </div>
+                <div id="projetos">
+                    <li><a href="projeto.html" class="linkmenu">Projetos</a></li>
+                </div>
+                
+                <div id="contatos">
+                    <li><a href="#" class="linkmenu">Contato</a></li>
+                </div>
+                <div id="contatos">
+                    <li><a href="https://wiki.archlinux.org/" target="_blank" class="linkmenu">Arch Wiki</a></li>
+                </div>
+        
+            </ul>
+        </nav>
+    </div>
+
+  
+
+    <div id="planodefundo"><img src="img/archsite.png" alt="logo arch linux" id="logoarch"></div>
+
+
+    
+    <div id="coolhori">
+        <input type="checkbox" id="checkbox2">
+     <label for="checkbox2" id="label"><img src="img/homemeni.jpg" alt="" id="menuseta"></label>
+        <nav id="navegatorhorizontal">
+        <ul id="lista">
+            <div id="menuhorizontal"></div>
+           
+            <div id="logoterminal">
+                <li><a href="terminalultimo.html"><img src="img/Terminal.png" alt="" id="logoterminalimg"></a>
+            </div>
+            <div><a href="pacman.html"><img src="img/pacman.png" alt="" id="logopacman"></a></div>
+        
+            <div><a href="https://www.youtube.com/channel/UCb-2RNIJyoF9RfGMjOgm5UA" target="_blank"><img src="img/logoyoutube.png" alt="" id="logoyoutube"></a></div>
+    
+              <div>
+             
+                           
+                <button id="sendmail"><img src="img/email.jpg" alt="" id="logoemail"></button>
+                <script>document.getElementById('sendmail').addEventListener('click', function(event){
+                    event.preventDefault();
+                      document.location.href = 'mailto:romulotederix3@gmail.com';
+                  });</script>
+                   <a href="https://www.facebook.com/romulo.montovani/" target="_blank"><img src="img/a.png" alt="" id="face"></a>
+                    </div>
+            
+            
+    
+        </ul>
+     </nav>
+    
+    <div>
+        
+
+
+    <div id="engrenagemmenu">
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3" id="label2"><img src="img/engrenagemmenu.png" alt="" id="logoengrenagem"></label>
+        <nav id="navegatorengrenagem">
+            <ul id="listaengrenagem">
+               
+                
+                    <li><button onclick="AtivarDesativarFS();" style="background-color:#2166e6;" id="botaof11"><img src="img/f11-key.png" alt="" id="logof12"></button>
+                        <script>
+                            //Criando uma variável global para nos dizer em qual estado a tela atual se encontra.
+                            isFullScreen = false;
+                            var elem = document.documentElement;
+                            function AtivarDesativarFS() {
+                                //Se o estado atual for "FullScreen", desativá-lo.
+                                //Note que para as verificações é feito uma validação para todos os possíveis navegadores, facilitando a sua vida.
+                                  
+                                if (elem.requestFullscreen) {
+                                 elem.requestFullscreen();
+                                 isFullScreen = true;
+                              } else if (elem.mozRequestFullScreen) { /* Firefox */
+                                 elem.mozRequestFullScreen();
+                                  isFullScreen = true;
+                              } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                                elem.webkitRequestFullscreen();
+                                 isFullScreen = true;
+                              } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                                elem.msRequestFullscreen();
+                                 isFullScreen = true;
+                              }
+                                  
+                                  
+                                  
+                                  if (document.exitFullscreen) {
+                                  document.exitFullscreen();
+                                  isFullScreen = false;
+                                } else if (document.mozCancelFullScreen) { /* Firefox */
+                                  document.mozCancelFullScreen();
+                                  isFullScreen = false;
+                                } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+                                  document.webkitExitFullscreen();
+                                } else if (document.msExitFullscreen) { /* IE/Edge */
+                                  document.msExitFullscreen();
+                                  isFullScreen = false;
+                                }
+                            
+                            
+                             
+                            
+                            }
+                            </script>
+               
+                           
+        
+            </ul>
+        </nav>
+        </div>
+
+        <img src="img/bateria.png" alt="" id="battery">
+
+
+
+     
+            <a href="#" class="pastaprojetos"><img src="img/iconepasta.png" alt="" id="pasta"></a>
+            <a href=""><img src="img/lixeira.png" alt="" id="lixeira"></a>
+         
+        
+   
+         
+</body>
+</html>
